@@ -1,0 +1,124 @@
+
+:root {
+
+    --bg-1: rgb(10, 8, 13);
+    --bg-2: oklch(0.20 0.02 290);
+
+    background-color: oklch(0.3 0 0);
+    padding: 0;
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    user-select: none;
+
+}
+
+html, body {
+
+    background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 60%);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+div, p, span {
+
+    color: white;
+
+}
+
+#parent {
+
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#input-box {
+
+    position: fixed;
+    width: 40%;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: large;
+
+}
+
+#send {
+
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(0%, -50%);
+
+}
+
+#send:hover {
+
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.559);
+
+}
+
+#chats {
+
+    width: 40%;
+    margin-top: 50px;
+
+}
+
+.bot-message {
+
+    width: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+}
+
+.bot-message > div {
+
+    align-self: center;
+    margin-top: 3px;
+
+}
+
+.bot-message > svg {
+
+    justify-self: center;
+    align-self: start;
+
+}
+
+.user-message {
+
+    border-radius: 10px 0 10px 10px;
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 12px;
+    margin-top: 10px;
+    text-align: right;
+    width: fit-content;
+    margin-left: auto;
+
+
+}
