@@ -15,6 +15,8 @@ You'll Learn:
 * Chrome
 * Git (optional)
 
+Download the starter code by downloading the zip file or by running `git clone https://github.com/VandyHacks/workshop1-2025.git`.
+
 ### Frontend
 To run the frontend, navigate into the **frontend** folder and open the HTML file **index.html** with Chrome.
 
