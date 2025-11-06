@@ -17,6 +17,8 @@ router = APIRouter()
 @router.get("/agent")
 async def agent(request: str):
 
+    # Create agent logic here.
+    
     return { "response": f"{request} received!"}
 
 app.include_router(router, prefix="/api")

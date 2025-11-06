@@ -10,13 +10,11 @@ class Agent {
         window.addEventListener("keydown", (e) => {
             if (e.key === 'Enter') {
                 this.createResponse(this.input.value);
-                this.input.value = "";
             }
         });
 
         this.send.addEventListener("click", () => {
             this.createResponse(this.input.value);
-            this.input.value = "";
         });
     
     }
@@ -31,6 +29,7 @@ class Agent {
         userMessage.className = "user-message";
         userMessage.textContent = input;
         this.chats.appendChild(userMessage);
+        this.input.value = "";
 
         const response = document.createElement("div");
         response.className = "bot-message";
@@ -47,6 +46,7 @@ class Agent {
             <div class="loading-indicator"></div>
         `;
         const chat = this.chats.appendChild(response);
+        this.chats.scrollTop = this.chats.scrollHeight;
 
         (async () => {
             try {
@@ -61,7 +61,7 @@ class Agent {
                 this.makingRequest = false;
             }
         })();
-        
+
     }
 
 
