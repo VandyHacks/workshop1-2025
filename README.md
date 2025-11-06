@@ -7,6 +7,9 @@ You'll Learn:
 * How to create tools for task automation.
 * How to integrate tools into an AI agent's reasoning.
 
+You'll Build:
+* An AI agent capable of interacting API(s) of your choice!
+
 # Setup
 
 ### Requirements
