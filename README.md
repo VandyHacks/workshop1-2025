@@ -4,7 +4,7 @@ This workshop covers how to build AI systems that can plan, reason, and take act
 
 You'll Learn:
 * How to create agentic workflows using the Gemini Python API.
-* How to creare tools for task automation.
+* How to create tools for task automation.
 * How to integrate tools into an AI agent's reasoning.
 
 # Setup
