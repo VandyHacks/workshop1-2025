@@ -1,8 +1,7 @@
-
 :root {
 
     --bg-1: rgb(10, 8, 13);
-    --bg-2: oklch(0.20 0.02 290);
+    --bg-2: oklch(0.24 0.02 290);
 
     background-color: oklch(0.3 0 0);
     padding: 0;
@@ -18,7 +17,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 
 }
 
@@ -33,7 +31,9 @@ div, p, span {
     position: relative;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
 
 }
 
@@ -53,6 +53,7 @@ div, p, span {
     left: 50%;
     transform: translate(-50%);
     font-size: large;
+    z-index: 100;
 
 }
 
@@ -84,22 +85,45 @@ div, p, span {
 
     width: 40%;
     margin-top: 50px;
+    margin-bottom: 150px;
+    overflow-y: scroll;
+    padding-left: 10px;
+    padding-right: 20px;
 
 }
 
+#chats::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+}
+#chats::-webkit-scrollbar-track {
+   background-color: transparent;
+}
+#chats::-webkit-scrollbar-thumb {
+    background: oklch(0.3 0.02 290);
+    border-radius: 10px;
+}
+
+
+
 .bot-message {
 
-    width: 100%;
-    margin-top: 10px;
+    width: fit-content;
+    max-width: 78%;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 50px 1fr;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    overflow-wrap: break-word;
 
 }
 
 .bot-message > div {
 
     align-self: center;
-    margin-top: 3px;
+    margin-top: 1px;
 
 }
 
@@ -115,10 +139,40 @@ div, p, span {
     border-radius: 10px 0 10px 10px;
     background-color: rgba(255, 255, 255, 0.07);
     padding: 12px;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: right;
     width: fit-content;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
     margin-left: auto;
+    overflow-wrap: break-word;
+    max-width: 78%;
+
+}
+
+.loading-indicator {
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    animation: fade-in-out 1.5s ease-out 0.25s infinite alternate;
+    opacity: 0;
+    animation-timing-function: ease-out;
+
+}
+
+@keyframes fade-in-out {
+
+    100% {
+        opacity: 1;
+        scale: 100%;
+    }
+    0% {
+        opacity: 0;
+        scale: 50%;
+    }
 
 
 }
