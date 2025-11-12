@@ -59,7 +59,10 @@ class Agent {
                 chat.innerHTML += "<div>An error occurred!</div>";
             } finally {
                 this.makingRequest = false;
-                this.chats.scrollTop = this.chats.scrollHeight;
+                this.chats.scrollTo({
+                    behavior: "smooth",
+                    top: this.chats.scrollHeight
+                })
             }
         })();
 
