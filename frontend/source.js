@@ -53,12 +53,13 @@ class Agent {
                 const res = await fetch(`http://localhost:8000/api/agent?request=${encodeURIComponent(input)}`);
                 const data = await res.json();
                 chat.querySelector(".loading-indicator").remove();
-                chat.innerHTML += `<div>${data.response}</div>`;
+                chat.innerHTML += `<div>${marked.parse(data.response)}</div>`;
             } catch (error) {
                 chat.querySelector(".loading-indicator").remove();
                 chat.innerHTML += "<div>An error occurred!</div>";
             } finally {
                 this.makingRequest = false;
+                this.chats.scrollTop = this.chats.scrollHeight;
             }
         })();
 

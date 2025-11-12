@@ -109,7 +109,7 @@ div, p, span {
 .bot-message {
 
     width: fit-content;
-    max-width: 78%;
+    max-width: 100%;
     margin-top: 20px;
     display: grid;
     grid-template-columns: 50px 1fr;
@@ -123,8 +123,14 @@ div, p, span {
 .bot-message > div {
 
     align-self: center;
+    line-height: 1.5;
     margin-top: 1px;
 
+}
+
+.bot-message > div > :first-child {
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 .bot-message > svg {
