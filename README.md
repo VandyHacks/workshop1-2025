@@ -1,6 +1,6 @@
 # Workshop #1: An Introduction to Agentic AI
 
-### 11/20/2025 6:00 PM
+### 11/19/2025 6:00 PM
 
 This workshop covers how to build AI systems that can plan, reason, and take action through tool calling. Learn how agents use APIs, functions, and external tools to solve tasks autonomously.
 
