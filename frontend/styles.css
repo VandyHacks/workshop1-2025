@@ -92,6 +92,12 @@ div, p, span {
 
 }
 
+@media (max-width: 767px) {
+    #chats {
+        width: 60%;
+    }
+}
+
 #chats::-webkit-scrollbar {
     width: 5px;
     border-radius: 10px;
